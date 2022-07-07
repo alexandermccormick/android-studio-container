@@ -3,7 +3,7 @@
 DST_IMAGE=$1
 BASE_IMAGE="android-studio-base"
 
-if [ -z ${DST_IMAGE} ]; then echo "Destination image should be specified. Example: $0 myrepo/android-studio:x" && exit; else echo "Destination image: $DST_IMAGE"; fi
+if [ -z ${DST_IMAGE} ]; then echo "Destination image should be specified. Example: myrepo/android-studio:x" && exit; else echo "Destination image: $DST_IMAGE"; fi
 
 # clean old containers
 podman rm android_studio_container > /dev/null || echo ''
